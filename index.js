@@ -24,7 +24,8 @@ const defaultOptions = {
   // https://github.com/stereobooster/react-snap/issues/120
   headless: true,
   puppeteer: {
-    cache: true
+    cache: true,
+    timeout: 120000
   },
   puppeteerArgs: [],
   puppeteerExecutablePath: undefined,
@@ -86,6 +87,10 @@ const defaults = userOptions => {
   const options = {
     ...defaultOptions,
     ...userOptions
+  };
+  options.puppeteer = {
+    ...defaultOptions.puppeteer,
+    ...userOptions.puppeteer
   };
   options.destination = options.destination || options.source;
 

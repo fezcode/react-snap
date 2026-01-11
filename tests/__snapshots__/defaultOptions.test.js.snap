@@ -34,6 +34,7 @@ Object {
   "publicPath": "/",
   "puppeteer": Object {
     "cache": true,
+    "timeout": 120000,
   },
   "puppeteerArgs": Array [],
   "puppeteerExecutablePath": undefined,
