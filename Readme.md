@@ -123,9 +123,16 @@ If you need to pass some options for `react-snap`, you can do this in your `pack
 
 ```json
 "reactSnap": {
-  "inlineCss": true
+  "inlineCss": true,
+  "puppeteer": {
+    "timeout": 120000
+  }
 }
 ```
+
+### puppeteer.timeout
+
+Wait timeout for `page.goto` in milliseconds. Default: `120000`.
 
 Not all options are documented yet, but you can check `defaultOptions` in `index.js`.
 
